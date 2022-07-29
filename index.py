@@ -127,7 +127,7 @@ def tabelaProdutos(tamanhoProduto, tipoProduto):
 
 def tabelaClientes():
     # Funcao para criar e printar a tabela dos clientes
-    print("Clientes cadastrados\n")
+    print("\nClientes cadastrados")
     print("|Código| |Nome|")
 
     for i in range(tamanhoClientes):
@@ -151,6 +151,8 @@ while True:
     tamanhoDocumentarios = len(documentarios)
     tamanhoClientes = len(clientes)
     tamanhoCompras = len(compras)
+    todosProdutos = series + filmes + documentarios
+    tamanhoProdutos = len(todosProdutos)
 
     print("\nEscolha uma opção")
     Tarefa()
@@ -163,14 +165,14 @@ while True:
 
     if opTarefa == 1:  # Tarefa 1 Cadastro
 
-        print("< Cadastro de Produtos />")
+        print("\n< Cadastro de Produtos />")
 
         Tipos()
         opTipo = int(input("Escolha uma opção acima: "))
         erro = 0
         while opTipo <= 0 or opTipo >= 4:
             # While que verifica a entrada do usuário
-            print("Opção inválida!! \n Vamos tentar novamente!")
+            print("Opção inválida!!\nVamos tentar novamente!")
             Tipos()
             opTipo = int(input("Escolha uma opção acima: "))
             erro += 1
@@ -186,9 +188,9 @@ while True:
                     print("HAHAHAHAHAHAHAHAHAHAHAHAHAHAAH")
 
         if opTipo == 1:  # Cadastro de Séries
-            print("< Cadastro de Séries />")
+            print("\n< Cadastro de Séries />")
 
-            print("Iformações do Produto \n")
+            print("Iformações do Produto")
             codSerie += 1
             nome = input("Nome: ")
             tipo = 1
@@ -203,7 +205,7 @@ while True:
 
             while venda != "True" and venda != "False":
                 # While que verifica a entrada do usuário
-                print("\nOpção inválida!! \nVamos tentar novamente!\n")
+                print("\nOpção inválida!!\nVamos tentar novamente!")
                 print("Informe True para disponível")
                 print("Informe False para indisponível")
                 venda = input("Disponibilidade para venda: ")
@@ -214,12 +216,12 @@ while True:
 
             serie = cadastro(codSerie, nome, tipo, preco, venda)
             series += [serie]
-            print("Série cadastrada com sucesso!")
+            print("\nSérie cadastrada com sucesso!")
 
         elif opTipo == 2:  # Cadastro de Filmes
-            print("< Cadastro de Filmes />")
+            print("\n< Cadastro de Filmes />")
 
-            print("Iformações do Produto \n")
+            print("Iformações do Produto")
             codFilme += 1
             nome = input("Nome: ")
             tipo = 2
@@ -234,7 +236,7 @@ while True:
 
             while venda != "True" and venda != "False":
                 # While que verifica a entrada do usuário
-                print("Opção inválida!! \nVamos tentar novamente!")
+                print("\nOpção inválida!!\nVamos tentar novamente!")
                 print("Informe True para disponível")
                 print("Informe False para indisponível")
                 venda = input("Disponibilidade para venda: ")
@@ -245,12 +247,12 @@ while True:
 
             filme = cadastro(codFilme, nome, tipo, preco, venda)
             filmes += [filme]
-            print("Filme cadastrado com sucesso!")
+            print("\nFilme cadastrado com sucesso!")
 
         elif opTipo == 3:  # Cadastro de Documentários
-            print("< Cadastro de Documentários />")
+            print("\n< Cadastro de Documentários />")
 
-            print("Iformações do Produto \n")
+            print("Iformações do Produto")
             codDocumentario += 1
             nome = input("Nome: ")
             tipo = 3
@@ -265,7 +267,7 @@ while True:
 
             while venda != "True" and venda != "False":
                 # While que verifica a entrada do usuário
-                print("Opção inválida!! \nVamos tentar novamente!")
+                print("\nOpção inválida!!\nVamos tentar novamente!")
                 print("Informe True para disponível")
                 print("Informe False para indisponível")
                 venda = input("Disponibilidade para venda: ")
@@ -276,11 +278,11 @@ while True:
 
             documentario = cadastro(codDocumentario, nome, tipo, preco, venda)
             documentarios += [documentario]
-            print("Documentário cadastrado com sucesso!")
+            print("\nDocumentário cadastrado com sucesso!")
 
     elif opTarefa == 2:  # Tarefa 2 Consulta
 
-        print("< Consulta de Produtos />")
+        print("\n< Consulta de Produtos />")
 
         TiposPlus()
         opTipo = int(input("Escolha uma opção acima: "))
@@ -296,7 +298,7 @@ while True:
                 print("\nNenhuma série cadastrada!")
                 print("Volte para o menu principal e cadastre uma série \n")
             else:
-                print("Séries Cadastradas\n")
+                print("\nSéries Cadastradas")
 
                 tamanhoProduto = tamanhoSeries
                 tipoProduto = series
@@ -308,7 +310,7 @@ while True:
                 print("\nNenhum filme cadastrado!")
                 print("Volte para o menu principal e cadastre um filme \n")
             else:
-                print("Filmes Cadastrados\n")
+                print("\nFilmes Cadastrados")
 
                 tamanhoProduto = tamanhoFilmes
                 tipoProduto = filmes
@@ -320,7 +322,7 @@ while True:
                 print("\nNenhum documentário cadastrado!")
                 print("Volte para o menu principal e cadastre um documentário \n")
             else:
-                print("Documentários Cadastrados\n")
+                print("\nDocumentários Cadastrados")
 
                 tamanhoProduto = tamanhoDocumentarios
                 tipoProduto = documentarios
@@ -340,7 +342,7 @@ while True:
                 print("\nNenhuma venda realizada!")
                 print("Volte para o menu principal e realize uma venda \n")
             else:
-                print("Compras cadastrados:")
+                print("\nCompras cadastrados:")
                 print(compras)
 
         else:
@@ -348,7 +350,7 @@ while True:
 
     elif opTarefa == 3:  # Tarefa 3 Atualizar
 
-        print("< Atualizar Produtos />")
+        print("\n< Atualizar Produtos />")
 
         Tipos()
         opTipo = int(input("Escolha uma opção acima: "))
@@ -363,7 +365,7 @@ while True:
                 print("\nNenhuma série cadastrada!")
                 print("Volte para o menu principal e cadastre uma série \n")
             else:
-                print("Lista de séries cadastradas\n")
+                print("\nLista de séries cadastradas")
 
                 tamanhoProduto = tamanhoSeries
                 tipoProduto = series
@@ -382,9 +384,9 @@ while True:
 
                 serieSelect = series[codSerie]
 
-                print(f"Série informada {serieSelect[1]}")
+                print(f"\nSérie informada {serieSelect[1]}\n")
 
-                print("Selecione o que iremos alterar")
+                print("\nSelecione o que iremos alterar")
                 Informacoes()
 
                 codInfo = int(input("Escolha uma opção acima: "))
@@ -422,14 +424,14 @@ while True:
 
                 serieSelect[codInfo] = date
 
-                print("Dado alterado com sucesso! \n")
+                print("\nDado alterado com sucesso!\n")
 
         elif opTipo == 2:  # Atualizar Filme
             if tamanhoFilmes <= 0:
                 print("\nNenhum filme cadastrado!")
                 print("Volte para o menu principal e cadastre um filme \n")
             else:
-                print("Lista de filmes cadastrados\n")
+                print("\nLista de filmes cadastrados")
 
                 tamanhoProduto = tamanhoFilmes
                 tipoProduto = filmes
@@ -449,9 +451,9 @@ while True:
 
                 filmeSelect = filmes[codFilme]
 
-                print(f"Filme informado {filmeSelect[1]}")
+                print(f"\nFilme informado {filmeSelect[1]}\n")
 
-                print("Selecione o que iremos alterar")
+                print("\nSelecione o que iremos alterar")
                 Informacoes()
 
                 codInfo = int(input("Escolha uma opção acima: "))
@@ -493,14 +495,14 @@ while True:
 
                 serieSelect[codInfo] = date
 
-                print("Dado alterado com sucesso! \n")
+                print("\nDado alterado com sucesso!\n")
 
         elif opTipo == 3:  # Atualizar Documentário
             if tamanhoDocumentarios <= 0:
                 print("\nNenhum documentário cadastrado!")
                 print("Volte para o menu principal e cadastre um documentário \n")
             else:
-                print("Lista de documentários cadastrados\n")
+                print("\nLista de documentários cadastrados")
 
                 tamanhoProduto = tamanhoDocumentarios
                 tipoProduto = documentarios
@@ -520,9 +522,9 @@ while True:
 
                 documentarioSelect = documentarios[codDocumentario]
 
-                print(f"Filme informado {documentarioSelect[1]}")
+                print(f"\nDocumentário informado {documentarioSelect[1]}\n")
 
-                print("Selecione o que iremos alterar")
+                print("\nSelecione o que iremos alterar")
                 Informacoes()
 
                 codInfo = int(input("Escolha uma opção acima: "))
@@ -547,7 +549,6 @@ while True:
 
                 if codInfo == 4:
                     date = input(f"Informe {info}: ")
-                    print(f"Teste: {serieSelect[codInfo]}")
 
                     if date == "Disponibilidade para Venda: true":
                         date = "Disponibilidade para Venda: True"
@@ -564,10 +565,10 @@ while True:
 
                 serieSelect[codInfo] = date
 
-                print("Dado alterado com sucesso! \n")
+                print("\nDado alterado com sucesso! \n")
 
     elif opTarefa == 4:  # Tarefa 4 Relatório
-        print("< Relatório />")
+        print("\n< Relatório />")
 
         TiposRelatorio()
         opTipo = int(input("Escolha uma opção acima: "))
@@ -578,29 +579,13 @@ while True:
             opTipo = int(input("Escolha uma opção acima:"))
 
         if opTipo == 0:  # Todos os Produtos
-            print("Todos os Produtos")
-            if tamanhoFilmes <= 0:
-                print("\nNenhum filme cadastrado!")
-                print("Volte no menu anterior e cadastro um filme\n")
+            if tamanhoProdutos <= 0:
+                print("\nNenhum produto cadastrado ainda!")
+                print("Volte no menu anterior e cadastre um produto")
             else:
-                tamanhoProduto = tamanhoFilmes
-                tipoProduto = filmes
-                tabelaProdutos(tamanhoProduto, tipoProduto)
-
-            if tamanhoSeries <= 0:
-                print("\nNenhuma série cadastrada!")
-                print("Volte no menu anterior e cadastre uma série\n")
-            else:
-                tamanhoProduto = tamanhoSeries
-                tipoProduto = series
-                tabelaProdutos(tamanhoProduto, tipoProduto)
-
-            if tamanhoDocumentarios <= 0:
-                print("\nNenhum documentário cadastrado!")
-                print("Volte no menu anterior e cadastro um documentário\n")
-            else:
-                tamanhoProduto = tamanhoDocumentarios
-                tipoProduto = documentarios
+                print("\nTodos os Produtos")
+                tamanhoProduto = tamanhoProdutos
+                tipoProduto = todosProdutos
                 tabelaProdutos(tamanhoProduto, tipoProduto)
 
         elif opTipo == 1:  # Todos os Filmes
@@ -608,7 +593,7 @@ while True:
                 print("\nNenhum filme cadastrado!")
                 print("Volte no menu anterior e cadastro um filme\n")
             else:
-                print("Todos o filmes\n")
+                print("\nTodos os filmes")
 
                 tamanhoProduto = tamanhoFilmes
                 tipoProduto = filmes
@@ -619,7 +604,7 @@ while True:
                 print("\nNenhuma série cadastrada!")
                 print("Volte no menu anterior e cadastro uma série\n")
             else:
-                print("Todos o séries\n ")
+                print("\nTodos as séries")
 
                 tamanhoProduto = tamanhoSeries
                 tipoProduto = series
@@ -630,7 +615,7 @@ while True:
                 print("\nNenhum documentário cadastrado!")
                 print("Volte no menu anterior e cadastro um documentário\n")
             else:
-                print("Todos o documentários\n")
+                print("\nTodos os documentários")
 
                 tamanhoProduto = tamanhoDocumentarios
                 tipoProduto = documentarios
@@ -673,10 +658,10 @@ while True:
                 print(f"{false}")
 
     elif opTarefa == 5:  # Tarefa 5 Registro de Compra
-        print("< Registro de Compras />")
+        print("\n< Registro de Compras />")
 
         if tamanhoClientes == 0:
-            print("Nenhum cliente cadastrado ainda!")
+            print("\nNenhum cliente cadastrado ainda!")
             print("Acesso a opção 7 do menu anterior")
             print("Saindo...")
         else:
@@ -688,7 +673,7 @@ while True:
 
             while codCliente < 0 or codCliente >= tamanhoClientes:
                 # While que verifica a entrada do usuário
-                print("Opção inválda!! \n Vamos tentar novamente!")
+                print("\nOpção inválda!!\nVamos tentar novamente!")
 
                 tabelaClientes()
                 codCliente = int(input("Escolha uma opção acima: "))
@@ -696,13 +681,13 @@ while True:
             clienteSelect = clientes[codCliente]
             nomeCliente = clienteSelect[1]
             codCliente = clienteSelect[0]
-            print(f"Cliente selecionado: {clienteSelect[1]}")
+            print(f"\nCliente selecionado: {clienteSelect[1]}\n")
 
-            print("Selecione o item para a compra: ")
+            print("\nSelecione o item para a compra: ")
 
             Tipos()
             opTipo = int(input("Escolha uma opção acima: "))
-            while opTipo <= 0 or opTipo >= 5:
+            while opTipo <= 0 or opTipo > 3:
                 # While que verifica a entrada do usuário
                 print("\nOpção inválda!!\nVamos tentar novamente!")
                 Tipos()
@@ -710,10 +695,10 @@ while True:
 
             if opTipo == 1:  # Compra de Séries
                 if tamanhoSeries <= 0:
-                    print("Nenhuma série cadastrada ainda!")
+                    print("\nNenhuma série cadastrada ainda!")
                     print("Retorno no menu anterior e cadastre uma série")
                 else:
-                    print("< Compra de Séries />")
+                    print("\n< Compra de Séries />")
 
                     confirmadoCompra = 0
                     confirmadoPedido = 0
@@ -742,14 +727,18 @@ while True:
                             dispCompra = serieSelect[4]
                             # Verifica se o produto está cadastrado, se nao, nao deixa dar sequencia
                             while dispCompra == "Disponibilidade de Venda: False":
-                                print(
-                                    "Opção não disponível para venda, vamos tentar novamente")
-
-                                tabelaProdutos(tamanhoProduto, tipoProduto)
-                                codSerie = int(
-                                    input("Informe o código da série: "))
-                                serieSelect = series[codSerie]
-                                dispCompra = serieSelect[4]
+                                if tamanhoSeries == 1:
+                                    print("Produto indiponível para venda...")
+                                    print(
+                                        "Consultamos e não temos nenhum produto para venda, volte no menu anterios e cadastre um produto disponível para venda!!")
+                                    print("Saindo...")
+                                    break
+                                else:
+                                    tabelaProdutos(tamanhoProduto, tipoProduto)
+                                    codSerie = int(
+                                        input("Informe o código da série: "))
+                                    serieSelect = series[codSerie]
+                                    dispCompra = serieSelect[4]
 
                             print("\nConfirma o nome da série para a venda?")
                             print(f"Séria selecionada: {serieSelect[1]}\n")
@@ -762,7 +751,7 @@ while True:
                                 compra = cadastroCompra(
                                     codCompra, codCliente, nomeCliente, nomeProduto, preco)
                                 compras += [compra]
-                                print("Venda registrada com Sucesso!")
+                                print("\nVenda registrada com Sucesso!")
                                 break
 
                             else:
@@ -773,18 +762,18 @@ while True:
                         print("Digite 0 para realizar uma nova venda")
                         condicaoVenda = int(input("Escolha uma opção acima: "))
 
-                        if condicaoVenda == 0:
+                        if condicaoVenda <= 0:
                             confirmadoPedido = 0
                         else:
                             confirmadoCompra = -1
-                            print("Venda registrada com Sucesso!")
+                            print("\nVenda registrada com Sucesso!")
 
             elif opTipo == 2:  # Compra de Filmes
                 if tamanhoFilmes <= 0:
-                    print("Nenhum filme cadastrado ainda!")
+                    print("\nNenhum filme cadastrado ainda!")
                     print("Retorno no menu anterior e cadastre um filme")
                 else:
-                    print("< Compra de Filmes />")
+                    print("\n< Compra de Filmes />")
 
                     confirmadoCompra = 0
                     confirmadoPedido = 0
@@ -801,7 +790,7 @@ while True:
                             filmeSelect = filmes[codFilme]
                             nomeProduto = filmeSelect[1]
                             while codFilme < 0 or codFilme > tamanhoFilmes:
-                                print("Opção inválda!! \n Vamos tentar novamente!")
+                                print("\nOpção inválda!!\nVamos tentar novamente!")
 
                                 tabelaProdutos(tamanhoProduto, tipoProduto)
                                 codFilme = int(
@@ -811,14 +800,17 @@ while True:
                             dispCompra = filmeSelect[4]
 
                             while dispCompra == "Disponibilidade de Venda: False":
-                                print(
-                                    "Opção não disponível para venda, vamos tentar novamente")
-
-                                tabelaProdutos(tamanhoProduto, tipoProduto)
-                                codFilme = int(
-                                    input("Informe o código do filme: "))
-                                filmeSelect = filmes[codFilme]
-                                dispCompra = filmeSelect[4]
+                                if tamanhoFilmes == 1:
+                                    print("Produto indiponível para venda...")
+                                    print(
+                                        "Consultamos e não temos nenhum produto para venda, volte no menu anterios e cadastre um produto disponível para venda!!")
+                                    print("Saindo...")
+                                else:
+                                    tabelaProdutos(tamanhoProduto, tipoProduto)
+                                    codFilme = int(
+                                        input("Informe o código do filme: "))
+                                    filmeSelect = filmes[codFilme]
+                                    dispCompra = filmeSelect[4]
 
                             print("\nConfirma o nome do filme para a venda?")
                             print(f"Filme selecionado: {filmeSelect[1]}\n")
@@ -831,7 +823,7 @@ while True:
                                 compra = cadastroCompra(
                                     codCompra, codCliente, nomeCliente, nomeProduto, preco)
                                 compras += [compra]
-                                print("Venda registrada com Sucesso!")
+                                print("\nVenda registrada com Sucesso!")
                                 break
 
                             else:
@@ -846,14 +838,14 @@ while True:
                             confirmadoPedido = 0
                         else:
                             confirmadoCompra = -1
-                            print("Venda registrada com Sucesso!")
+                            print("\nVenda registrada com Sucesso!")
 
             elif opTipo == 3:  # Compra de Documentários
                 if tamanhoDocumentarios <= 0:
-                    print("Nenhum documentário cadastrado ainda!")
+                    print("\nNenhum documentário cadastrado ainda!")
                     print("Retorno no menu anterior e cadastre um documentário")
                 else:
-                    print("< Compra de Documentário />")
+                    print("\n< Compra de Documentário />")
 
                     confirmadoCompra = 0
                     confirmadoPedido = 0
@@ -871,7 +863,7 @@ while True:
                             documentarioSelect = documentarios[codDocumentario]
                             nomeProduto = documentarioSelect[1]
                             while codDocumentario < 0 or codDocumentario >= tamanhoDocumentarios:
-                                print("Opção inválda!! \n Vamos tentar novamente!")
+                                print("Opção inválda!!\nVamos tentar novamente!")
 
                                 tabelaProdutos(tamanhoProduto, tipoProduto)
                                 codDocumentario = int(
@@ -881,18 +873,22 @@ while True:
                             dispCompra = documentarioSelect[4]
 
                             while dispCompra == "Disponibilidade de Venda: False":
-                                print(
-                                    "Opção não disponível para venda, vamos tentar novamente")
 
-                                tabelaProdutos(tamanhoProduto, tipoProduto)
-                                codDocumentario = int(
-                                    input("Informe o código do documentário: "))
-                                documentarioSelect = documentarios[codDocumentario]
-                                dispCompra = documentarioSelect[4]
+                                if tamanhoDocumentarios == 1:
+                                    print("Produto indiponível para venda...")
+                                    print(
+                                        "Consultamos e não temos nenhum produto para venda, volte no menu anterios e cadastre um produto disponível para venda!!")
+                                    print("Saindo...")
+                                    break
+                                else:
+                                    tabelaProdutos(tamanhoProduto, tipoProduto)
+                                    codDocumentario = int(
+                                        input("Informe o código do documentário: "))
+                                    documentarioSelect = documentarios[codDocumentario]
+                                    dispCompra = documentarioSelect[4]
 
                             print("\nConfirma o nome do documentário para a venda?")
-                            print(
-                                f"Filme selecionado: {documentarioSelect[1]}\n")
+                            print(f"Filme selecionado: {documentarioSelect[1]}\n")
                             print("Informe -1 para confirmar")
                             print("Informe 0 ou outro número para alterar")
                             verificandoCompra = int(
@@ -902,7 +898,7 @@ while True:
                                 compra = cadastroCompra(
                                     codCompra, codCliente, nomeCliente, nomeProduto, preco)
                                 compras += [compra]
-                                print("Venda registrada com Sucesso!")
+                                print("\nVenda registrada com Sucesso!")
                                 break
 
                             else:
@@ -917,10 +913,10 @@ while True:
                             confirmadoPedido = 0
                         else:
                             confirmadoCompra = -1
-                            print("Venda registrada com Sucesso!")
+                            print("\nVenda registrada com Sucesso!")
 
     elif opTarefa == 6:  # Tarefa 6 Relatório de Compra
-        print("< Relatório de Compra />")
+        print("\n< Relatório de Compra />")
 
         if tamanhoClientes <= 0:
             # Verifica sem tem clientes cadastrados
@@ -948,7 +944,7 @@ while True:
 
             clienteSelect = clientes[codCliente]
             nomeCliente = clienteSelect[1]
-            print(f"Cliente selecionado: {clienteSelect[1]}")
+            print(f"\nCliente selecionado: {clienteSelect[1]}\n")
 
             comprasCliente = []
 
@@ -962,14 +958,14 @@ while True:
             print(f"{comprasCliente}")
 
     elif opTarefa == 7:  # Tarefa 7 Cadastro de Clientes
-        print("< Cadastro de Clientes />")
+        print("\n< Cadastro de Clientes />")
 
         codigoCliente += 1
         nomeCliente = input("Nome Cliente: ")
 
         cliente = cadastroCliente(codigoCliente, nomeCliente)
         clientes += [cliente]
-        print("\nCliente cadastrado com sucesso!\n")
+        print("\nCliente cadastrado com sucesso!")
 
     elif opTarefa == 8:  # Tarefa 8 Sair do NerdFlix
 

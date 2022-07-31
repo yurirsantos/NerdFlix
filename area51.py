@@ -1,8 +1,7 @@
-series = [1, 2, ]
-tamnho = len(series)
+nome = input("Informe seu nome Kauane: ")
+cont = 0
 
-cod = int(input("cod.. "))
-
-while cod < 0 or cod > tamnho:
-    print("Op inváliada")
-    input()
+while True:
+    print(f"Eu te amooooooooooooo {nome}")
+    print(f"Multiplicado por {cont}")
+    cont += 1
